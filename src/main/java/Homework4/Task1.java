@@ -1,6 +1,5 @@
 package Homework4;
 
-import jdk.internal.icu.lang.UCharacterDirection;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -13,7 +12,7 @@ import java.util.Set;
 
 public class Task1 {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Chromedrive\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\Cromedrivesg\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.google.com/search");
@@ -90,8 +89,8 @@ public class Task1 {
         Thread.sleep(2000);
         driver.switchTo().window(thirdWindowHandle.toString());
 
-        UCharacterDirection waitersStart = null;
-        waitersStart.toString();
+
+
         driver.findElement(By.xpath("//button[@id='alertBox']")).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         Alert alertbox = wait.until(ExpectedConditions.alertIsPresent());
